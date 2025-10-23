@@ -1,0 +1,47 @@
+Legacy address: mydDD9rsihNJqj2knHa4zVx8fiRGAoTBr8
+Bech32 address: bcrt1qywxc92wuvdlmxj7lytzzmfqyc7dvajax0xjun9
+Bech32m address: bcrt1pkpu687dueg3nrf9umddr98cu0p6nzx56sh9qd65kvy3phxuhpvqqgpztz6
+
+
+-----------------------------
+THEORY SECTION
+-----------------------------
+
+1️⃣ What are Legacy, Bech32, and Bech32m addresses?
+
+- **Legacy (P2PKH)**: These are the original Bitcoin addresses that start with “1”. They use older transaction formats, which have higher fees and larger data sizes.  
+  Example: 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa  
+
+- **Bech32 (P2WPKH)**: Introduced with SegWit (Segregated Witness). These addresses start with “bc1q”. They reduce transaction fees and improve speed and security by separating signatures from transaction data.  
+  Example: bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh  
+
+- **Bech32m (P2TR)**: Introduced with Taproot. These addresses start with “bc1p”. They are the most modern format, offering better privacy, efficiency, and support for advanced Bitcoin smart contracts.  
+  Example: bc1p5cyxnuxmeuwuvkwfem96llyjf5y62l4gl6zl3t  
+
+---
+
+2️⃣ What is the difference between hardened and non-hardened keys?
+
+In hierarchical deterministic (HD) wallets, keys are derived from a master key in a tree structure.  
+
+- **Non-hardened keys**: Can derive child public keys from a parent *public key*. This is convenient but slightly less secure — if a hacker gets one child private key and the parent public key, they could reconstruct the master private key.  
+
+- **Hardened keys**: Use an extra layer of security — you can only derive them from the parent *private key*, not the public key. It prevents that vulnerability.  
+
+✅ Summary: Hardened = safer but less flexible; Non-hardened = more convenient but riskier.
+
+---
+
+3️⃣ Why prefer deterministic wallets over non-deterministic wallets?
+
+- **Deterministic wallets**: All keys and addresses are generated from one master seed (e.g. your 12 or 24-word recovery phrase).  
+  ➤ If you lose your wallet, you can restore *everything* using that seed.
+
+- **Non-deterministic wallets**: Each address/key is random and independent. If you lose them, they’re gone forever.  
+
+✅ Therefore: Developers prefer deterministic wallets because they are easier to back up, recover, and synchronize — perfect for user safety and scalability.
+
+-----------------------------
+END OF THEORY
+-----------------------------
+
